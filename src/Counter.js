@@ -67,11 +67,11 @@ export function Counter() {
             alignItems: "center",
             justifyContent: "center",
             borderRadius: 20,
-            backgroundColor: "cyan",
+            backgroundColor: "lime",
             alignSelf: "center",
           }}
         >
-          <Text>Add</Text>
+          <Text style={{ fontWeight: "bold" }}>Add</Text>
         </TouchableOpacity>
 
         {data ? (
