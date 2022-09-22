@@ -22,7 +22,7 @@ export const counterSlice = createSlice({
     incrementByAmount: (state, action) => {
       state.value += action.payload;
     },
-    setName: (state, action) => {
+    setRoll: (state, action) => {
       state.Rollno = action.payload;
     },
   },
