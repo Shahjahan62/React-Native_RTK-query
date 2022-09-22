@@ -9,19 +9,27 @@ export const pokemonApi = createApi({
     getPokemonByName: builder.query({
       query: () => "/all",
     }),
-    // Getall: builder.mutation({
-    //   query: () => {
-    //     return;
-    //     {
-    //       method: "GET";
+    addRecord: builder.mutation({
+      query: (record) => ({
+        url: "/add",
+        method: "Post",
+        body: record,
+      }),
+    }),
+    Getall: builder.mutation({
+      query: () => ({
+        method: "GET",
 
-    //       url: "/all";
-    //     }
-    //   },
-    // }),
+        url: "/all",
+      }),
+    }),
   }),
 });
 
 // Export hooks for usage in functional components, which are
 // auto-generated based on the defined endpoints
-export const { useGetPokemonByNameQuery } = pokemonApi;
+export const {
+  useGetPokemonByNameQuery,
+  useAddRecordMutation,
+  useGetallMutation,
+} = pokemonApi;
